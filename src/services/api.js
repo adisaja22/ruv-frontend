@@ -111,7 +111,7 @@ export const apiService = {
 
 export const getStorageUrl = (path) => {
   if (!path) return '';
-  const baseUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+  const baseUrl = import.meta.env.VITE_API_URL || 'https://ruv.groovix.id/api';
   const domain = baseUrl.replace('/api', '');
   return `${domain}/storage/${path}`;
 };
