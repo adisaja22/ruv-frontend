@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL configuration (from env or fallback)
-const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://ruv.groovix.id/api';
 
 const api = axios.create({
   baseURL: API_URL,
