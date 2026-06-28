@@ -113,7 +113,7 @@ export const getStorageUrl = (path) => {
   if (!path) return '';
   const baseUrl = import.meta.env.VITE_API_URL || 'https://ruv.groovix.id/api';
   const domain = baseUrl.replace('/api', '');
-  return `${domain}/storage/${path}`;
+  return `${domain}/uploads/${path}`;
 };
 
 export default api;
