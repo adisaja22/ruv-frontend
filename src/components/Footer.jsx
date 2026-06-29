@@ -18,12 +18,6 @@ export const Footer = ({ contact }) => {
     return number ? `https://wa.me/${number}` : '#';
   };
 
-  // Securely clear any saved session to force login when clicking the footer admin link
-  const forceLoginAdmin = () => {
-    localStorage.removeItem('ruv_admin_token');
-    localStorage.removeItem('ruv_admin_user');
-  };
-
   return (
     <footer className="bg-neutral-900 text-neutral-200 pt-16 pb-8 border-t border-neutral-800 font-body">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 xl:px-20 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
@@ -104,15 +98,6 @@ export const Footer = ({ contact }) => {
               <a href="/#kontak" className="text-sm hover:text-secondary transition-colors">
                 Kontak
               </a>
-            </li>
-            <li>
-              <Link 
-                to="/admin/login" 
-                onClick={forceLoginAdmin}
-                className="text-[11px] text-neutral-500 hover:text-neutral-300 transition-colors mt-2 block"
-              >
-                Portal Admin Panel
-              </Link>
             </li>
           </ul>
         </div>
